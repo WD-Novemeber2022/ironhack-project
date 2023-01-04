@@ -9,4 +9,12 @@ router.get("/posts", (req, res) => {
   ;
 });
 
+router.get("/posts/:id", (req,res) => {
+  const {id} = req.params
+  Post.findById(id)
+  .then((post)=>{
+    res.render("posts/post-details", post)
+  })
+})
+
 module.exports = router;
