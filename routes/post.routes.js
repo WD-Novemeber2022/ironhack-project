@@ -9,4 +9,8 @@ router.get("/posts", (req, res) => {
   ;
 });
 
+router.get('/create', (req, res)=>{
+    res.render('posts/new')
+})
+
 module.exports = router;
